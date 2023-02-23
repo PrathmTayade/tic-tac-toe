@@ -23,7 +23,7 @@ export default function Game() {
   }
 
   return (
-    <div className="">
+    <div className="flex-auto p-4 dark:bg-slate-800">
       <div className="">
         <Board
           whosNext={whosNext}
@@ -64,22 +64,20 @@ export function Board({ whosNext, squares, onPlay }) {
   }
 
   return (
-    <div className="flex-auto p-4 dark:bg-slate-800">
-      <div className="container  flex flex-col items-center  justify-center">
-        <div className="  grid-row-3 grid  grid-cols-3  gap-1   ">
-          <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-          <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-          <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-          <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-          <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-          <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-          <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-          <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-          <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-        </div>
-        <div className="p-5 text-2xl font-semibold dark:text-slate-100 ">
-          {message}
-        </div>
+    <div className="container  flex flex-col items-center  justify-center">
+      <div className="  grid-row-3 grid  grid-cols-3  gap-1   ">
+        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+        <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+        <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+        <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+        <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+        <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+        <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+      </div>
+      <div className="p-5 text-2xl font-semibold dark:text-slate-100 ">
+        {message}
       </div>
     </div>
   );
