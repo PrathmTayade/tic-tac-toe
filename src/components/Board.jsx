@@ -76,7 +76,7 @@ export function Board({ whosNext, squares, onPlay }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-      <div className="p-4 text-2xl font-semibold text-slate-900 dark:text-slate-100 ">
+      <div className="p-4 text-2xl font-medium text-slate-900 dark:text-slate-100 ">
         {message}
       </div>
     </div>
